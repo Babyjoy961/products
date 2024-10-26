@@ -1,0 +1,157 @@
+/* Basic Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General Body Styling */
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d8139d;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    max-width: 100%;
+}
+
+.logo {
+    max-width: 60px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+
+/* Product Grid */
+
+.product-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+/* Product Card */
+
+.product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 100%;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+/* Button Styling */
+
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+/* Carousel */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    /* Prevents overflow */
+    border-radius: 12px;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+
+/* WhatsApp Floating Button */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Header for Smaller Screens */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
